@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
 
 :root {
-  --primary-color: #ff4757;
-  --primary-04-color: #ff475766;
-  --white-color: #ffffff;
-  --pure-white: #ffffff;
-  --grey-color: #747d8c;
-  --light-color: #f1f2f6;
-  --dark-color: #2f3542;
-  --dark-04-color: #2f354266;
+    --primary-color: #ff4757;
+    --primary-04-color: #ff475766;
+    --white-color: #ffffff;
+    --pure-white: #ffffff;
+    --grey-color: #747d8c;
+    --light-color: #f1f2f6;
+    --dark-color: #2f3542;
+    --dark-04-color: #2f354266;
 
-  --csspercent: 95;
-  --jspercent: 90;
-  --reactpercent: 80;
-  --vuepercent: 85;
-  --flutterpercent: 89;
+    --csspercent: 95;
+    --jspercent: 90;
+    --reactpercent: 80;
+    --vuepercent: 85;
+    --flutterpercent: 89;
 
-  --csscolor: #00a0e4;
-  --jscolor: #f7971e;
-  --reactcolor: #61dbfb;
-  --vuecolor: #00bc9b;
-  --fluttercolor: #54c5f8;
+    --csscolor: #00a0e4;
+    --jscolor: #f7971e;
+    --reactcolor: #61dbfb;
+    --vuecolor: #00bc9b;
+    --fluttercolor: #54c5f8;
 }
 
 [data-theme="dark"] {
@@ -35,7 +35,10 @@
     margin: 0;
     padding: 0;
 }
-*,::before,::after {
+
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
@@ -47,7 +50,8 @@ body {
     color: var(--dark-color);
     background-color: var(--white-color);
 }
-a { 
+
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -65,15 +69,29 @@ ul {
     list-style: none;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 800;
     line-height: normal;
 }
 
-h1 {font-size: 2.5em;}
-h2 {font-size: 2em;}
-h3 {font-size: 1.5em;}
-h4 {font-size: 1em;}
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1em;
+}
 
 /*-----------------------
 * Header
@@ -142,7 +160,11 @@ header .logo a {
 }
 
 @keyframes blinkprimary {
-    50% {box-shadow: 0 0 0 0 var(--primary-04-color)};
+    50% {
+        box-shadow: 0 0 0 0 var(--primary-04-color)
+    }
+
+    ;
 }
 
 header .socials a:hover {
@@ -212,15 +234,17 @@ main nav :is(.menu-trigger, .daynight label):hover {
 }
 
 @keyframes blinkdark {
-    50% {box-shadow: 0 0 0 0 var(--dark-04-color);}
+    50% {
+        box-shadow: 0 0 0 0 var(--dark-04-color);
+    }
 }
 
 main nav .daynight label .light,
-main nav .daynight input:checked ~ label .dark {
+main nav .daynight input:checked~label .dark {
     display: none;
 }
 
-main nav .daynight input:checked ~ label .light {
+main nav .daynight input:checked~label .light {
     display: block;
 }
 
@@ -258,7 +282,7 @@ main nav .menu ul {
 
 .hero .wrapper {
     position: relative;
-    min-height: calc(100vh - 100px);    
+    min-height: calc(100vh - 100px);
 }
 
 .hero .wrapper .image {
@@ -269,7 +293,7 @@ main nav .menu ul {
     transform: translateX(50%);
 }
 
-.hero .wrapper .image  img {
+.hero .wrapper .image img {
     max-width: 600px;
 }
 
@@ -282,7 +306,7 @@ main nav .menu ul {
     justify-content: space-between;
 }
 
-.hero .text > * {
+.hero .text>* {
     padding-right: 30%;
 }
 
@@ -361,16 +385,16 @@ main nav .menu ul {
     background-color: var(--light-color);
 }
 
-main > div:not(.hero) {
+main>div:not(.hero) {
     padding: 100px 0;
     overflow: hidden;
 }
 
-main > div .head {
+main>div .head {
     margin-bottom: 60px;
 }
 
-main > div .head h2 {
+main>div .head h2 {
     font-size: clamp(36px, 4.5vw, 3em);
 }
 
@@ -378,7 +402,7 @@ main .wrapper.center {
     text-align: center;
 }
 
-main > div:not(.hero, .testimonials) ul {
+main>div:not(.hero, .testimonials) ul {
     display: grid;
     grid-gap: 46px;
 }
@@ -429,7 +453,7 @@ main .wrapper .head p {
     color: var(--primary-color);
     border-radius: 50%;
     box-shadow: 0 0 0 5px var(--dark-04-color),
-                0 0 0 15px var(--light-color);
+        0 0 0 15px var(--light-color);
 }
 
 .service ul li h3 {
@@ -478,9 +502,9 @@ main .wrapper .head p {
     fill: none;
     stroke-width: 4;
     stroke-linecap: round;
-    transform: translate(5px,5px);
+    transform: translate(5px, 5px);
     stroke-dasharray: 440;
-    stroke-dashoffset: calc(440  - (440 * var(--csspercent)) / 100 );
+    stroke-dashoffset: calc(440 - (440 * var(--csspercent)) / 100);
 }
 
 .skills li.css svg circle {
@@ -535,9 +559,7 @@ main .wrapper .head p {
 
 .skills li .circle .inside span {
     font-size: 24px;
-    color: var(--grey-color);/*
-    opacity: 0;
-    transform: scale(0.2) translateY(50px);*/
+    color: var(--grey-color);
 }
 
 .skills li .circle .dot {
@@ -580,27 +602,27 @@ main .wrapper .head p {
 
 .skills li.css .circle .dot::before {
     background-color: var(--csscolor);
-    box-shadow: 0 0 10px var(--csscolor); 
+    box-shadow: 0 0 10px var(--csscolor);
 }
 
 .skills li.js .circle .dot::before {
     background-color: var(--jscolor);
-    box-shadow: 0 0 10px var(--jscolor); 
+    box-shadow: 0 0 10px var(--jscolor);
 }
 
 .skills li.react .circle .dot::before {
     background-color: var(--reactcolor);
-    box-shadow: 0 0 10px var(--reactcolor); 
+    box-shadow: 0 0 10px var(--reactcolor);
 }
 
 .skills li.vue .circle .dot::before {
     background-color: var(--vuecolor);
-    box-shadow: 0 0 10px var(--vuecolor); 
+    box-shadow: 0 0 10px var(--vuecolor);
 }
 
 .skills li.flutter .circle .dot::before {
     background-color: var(--fluttercolor);
-    box-shadow: 0 0 10px var(--fluttercolor); 
+    box-shadow: 0 0 10px var(--fluttercolor);
 }
 
 .skills li h4 {
@@ -608,18 +630,14 @@ main .wrapper .head p {
     color: var(--grey-color);
 }
 
-.skills li .animate.this svg circle{
+.skills li .animate.this svg circle {
     animation: fillline 2s linear forwards;
 }
-
-/*
-@keyframes fillline {
-    from stroke-dashoffset:440;
-}*/
 
 .skills li .animate.this .inside span {
     animation: showup 1s 1s forwards;
 }
+
 @keyframes showup {
     to {
         opacity: 1;
@@ -691,7 +709,7 @@ main .wrapper .head p {
     transition: object-position 1s;
 }
 
-.portfolio ul li:hover .thumbnail img{
+.portfolio ul li:hover .thumbnail img {
     object-position: right
 }
 
@@ -767,21 +785,24 @@ main .wrapper .head p {
     height: 50px;
     line-height: 1;
     color: var(--white-color);
-    font-size: 100px;
+    font-size: 3rem;
+    /* Dimensione delle virgolette */
     font-weight: 800;
     font-family: serif;
 }
 
 .testimonials ul li p::before {
     content: open-quote;
-    top: -20px;
-    left: 32px;
+    top: -10px;
+    left: 5px;
+
 }
 
 .testimonials ul li p::after {
     content: close-quote;
-    bottom: -10px;
-    right: 32px;
+    bottom: 1px;
+    right: 5px;
+
 }
 
 .testimonials ul li .thumbnail {
@@ -887,7 +908,7 @@ main .wrapper .head p {
     height: 46px;
 }
 
-.contact form :where(input, textarea):focus, 
+.contact form :where(input, textarea):focus,
 .contact form :where(input, textarea):not(:placeholder-shown):not(:focus) {
     border-color: var(--primary-color);
 }
@@ -912,7 +933,7 @@ main .wrapper .head p {
 }
 
 .contact ul li span {
-    text-transform: uppercase;   
+    text-transform: uppercase;
 }
 
 /*-----------------------
@@ -930,68 +951,97 @@ footer {
 * 9. Animation on scroll
 ------------------------- */
 
-.animate > * {
+.animate>* {
     opacity: 0;
     transition: opacity 1s .3s, transform .5s .3s;
 }
 
-.up.animate > * {
+.up.animate>* {
     transform: translate(0, -50%);
 }
 
-.down.animate > * {
+.down.animate>* {
     transform: translate(0, 50%);
 }
 
-.left.animate > * {
+.left.animate>* {
     transform: translate(-50%, 0);
 }
 
-.right.animate > * {
+.right.animate>* {
     transform: translate(50%, 0);
 }
 
-.animate.this > * {
-    transform: translate(0,0);
+.animate.this>* {
+    transform: translate(0, 0);
     opacity: 1;
 }
 
-.animate.this > *:nth-child(1) {
+.animate.this>*:nth-child(1) {
     transition-delay: .2s;
 }
 
-.animate.this > *:nth-child(2) {
+.animate.this>*:nth-child(2) {
     transition-delay: .4s;
 }
 
-.animate.this > *:nth-child(3) {
+.animate.this>*:nth-child(3) {
     transition-delay: .6s;
 }
 
-.animate.this > *:nth-child(4) {
+.animate.this>*:nth-child(4) {
     transition-delay: .8s;
 }
 
-.animate.this > *:nth-child(5) {
+.animate.this>*:nth-child(5) {
     transition-delay: .9s;
 }
 
-@media screen and (min-width: 768px) {
+
+
+@media screen and (max-width: 480px) {
+
+    nav .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-top: 20px;
+        margin-left: -50px;
+        list-style: none;
+    }
+
+    nav .menu ul li:nth-child(1),
+    nav .menu ul li:nth-child(2),
+    nav .menu ul li:nth-child(3) {
+        flex: 1 1 1;
+    }
+
+    nav .menu ul li:nth-child(4) {
+        text-align: left;
+        margin-top: -50px;
+    }
+
     header {
         width: 80px;
     }
-    .site > .wrapper {
+
+    .site>.wrapper {
         padding-left: 80px;
     }
+
     .container {
         padding: 0 64px;
     }
+
     .mobile-only {
         display: none;
     }
-    header, main nav .menu {
+
+    header,
+    main nav .menu {
         transform: none;
     }
+
     main nav .menu {
         position: relative;
         padding: 0;
@@ -999,30 +1049,177 @@ footer {
         background-color: transparent;
         font-size: inherit;
     }
+
     main nav .menu ul {
         flex-direction: row;
         justify-content: unset;
         gap: 46px;
     }
+
     main nav .menu ul li a {
         color: inherit;
         font-weight: 600;
-    }  
+    }
+
+    .latest-work .container {
+        margin-top: -100px;
+    }
+
+    .latest-work ul li .thumbnail {
+        height: auto;
+    }
+
+    .latest-work ul li .thumbnail img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .portfolio .container {
+        margin-top: -100px;
+    }
+
     .portfolio ul {
+        grid-template-columns: 1fr;
         grid-auto-flow: row;
-        grid-auto-columns: inherit;
-        overflow-x: unset;
-    } 
+    }
+
+    .portfolio ul li .thumbnail {
+        height: auto;
+    }
+
+    .portfolio ul li .thumbnail img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio ul li.has-hover {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portfolio ul li.has-hover a {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    .testimonials .container {
+        margin-top: -110px;
+    }
+
 }
 
-@media screen and (min-width: 1200px) {
+
+
+@media screen and (min-width: 481px) {
+
+    header {
+        width: 80px;
+    }
+
+    .site>.wrapper {
+        padding-left: 80px;
+    }
+
+    .container {
+        padding: 0 64px;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    header,
+    main nav .menu {
+        transform: none;
+    }
+
+    main nav .menu {
+        position: relative;
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+        font-size: inherit;
+    }
+
+    main nav .menu ul {
+        flex-direction: row;
+        justify-content: unset;
+        gap: 46px;
+    }
+
+    main nav .menu ul li a {
+        color: inherit;
+        font-weight: 600;
+    }
+
+    .latest-work .container {
+        margin-top: -100px;
+    }
+
+    .latest-work ul li .thumbnail {
+        height: auto;
+    }
+
+    .latest-work ul li .thumbnail img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .portfolio .container {
+        margin-top: -100px;
+    }
+
+    .portfolio ul {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .portfolio ul li .thumbnail {
+        height: auto;
+    }
+
+    .portfolio ul li .thumbnail img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio ul li.has-hover {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portfolio ul li.has-hover a {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    .testimonials .container {
+        margin-top: -100px;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
     .hero .wrapper .image {
         transform: none;
     }
-    .hero .text > * {
+
+    .hero .text>* {
         padding: 0;
+
     }
+
     .portfolio ul {
         grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-    } 
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .hero .container .wrapper .image {
+        transform: translateX(20%);
+    }
 }
